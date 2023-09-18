@@ -4,19 +4,33 @@
 **OUTLINE**
 
 [Step 1 - Lab setup](#step-1---lab-setup)
+
 [Step 2 - Prepare files for annotation](#step-2---prepare-files-for-annotation)
+
 [Step 3 - Download your files](#step-3---download-your-files)
+
 [Step 4 - Upload files to GenomeQC](#step-4---upload-files-to-genomeqc)
+
 [Step 5 - Submit your job](#step-5---submit-your-job)
+
 [Step 6 - Record your Annotation Metrics results](#step-6---record-your-annotation-metrics-results)
+
 [Lab Question 1](#lq-1)
+
 [Step 7 - Generate your DNA coding sequences](#step-7---generate-your-dna-coding-sequences)
+
 [Lab Question 2](#lq-2)
+
 [Step 8 - Filter your CDS file](#step-8---filter-your-cds-file)
+
 [Lab Question 3](#lq-3)
+
 [Step 9 - Generate your protein-coding sequences](#step-9---generate-your-protein-coding-sequences)
+
 [Lab Question 4](#lq-4)
+
 [Step 10 - BUSCO results](#step-10---busco-results)
+
 [LAb Question 5](#lq-5)
 
 
