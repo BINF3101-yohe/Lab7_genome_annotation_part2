@@ -212,11 +212,53 @@ You can write down the results in the Annotation Metrics Table or click the "Dow
 
 Report all 10 metrics in a screenshot or copied table. 
 
-## Step 6 - Generate your cds and protein sequences
+## Step 6 - Generate your DNA coding sequences
 
 Our gtf and gff3 files are like a road map, showing us where the genes are in our genome. We need to extract the coding sequences (CDS) and the amino acid sequences so we can analyze them down the road. 
 
 We will use a tool called **bedtools** to do this. 
+
+```bash
+#load bedtools
+module load bedtools2
+bedtools getfasta -fi SRR*12345*-contigs.v2.fa -bed SRR*12345*.gtf -fo SRR*12345*.cds.fasta
+
+#look at your files
+ls
+```
+You should see a new file SRR*12345*.cds.fasta. This contains the coding sequences for each gene predicted in our genome!
+
+# LQ 2 
+How many coding sequences are in your cds file? _hint - we have done this multiple times with grep_
+
+## Step 7 - Generate your protein-coding sequences
+
+To translate our DNA into Protein we use the codon table. This will predict the protein-coding sequences for all of our genes. 
+
+In class we discussed that the genetic code (the codon table) is _nearly_ universal. In the budding yeast, there are **three** different genetic codes in the nuclear DNA. 
+
+## Step 7a - Determine your genetic code
+
+Go to this table and determine which Order your species belongs to https://docs.google.com/spreadsheets/d/1HpniVA2vJSQ5Tif9RImTfOdA_D6Nithp1qk2sxAAnNI/edit?usp=sharing
+
+Based on the order your species is in select the correct genetic code
+|Order	|Codon Table|
+|------|------|
+|Ascoideales|	12|
+|Dipodascales| 1|
+|Phaffomycetales|	1|
+|Pichiales|	1|
+|Saccharomycetaceae|	1|
+|Saccharomycetales|	1|
+|Serinales|	12|
+|Trigonopsidales|	1|
+
+
+# LQ 3
+What  
+
+
+
 
 
 
