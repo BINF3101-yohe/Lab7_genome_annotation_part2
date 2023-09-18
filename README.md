@@ -125,20 +125,102 @@ head SRR-contigs.v2.fa
 We also need to compress the genome file
 
 ```bash
-gzip -k
+gzip -k SRR-contigs.v2.fa
+```
 
 
-To do this you will need to ****
+## Step 3 - Download your files
+
+To upload our files to the web server we need to download the files we need. 
+
+The two files we need are
+- SRR12345.gtf.gz
+- SRR12345-contigs.v2.fa.gz
+
+
+### Download on Mac
+Using scp. This will download it to your default directory. You can change the ```.``` to a different direcoty. 
+
+```scp username@hpc-student.uncc.edu:~lab_5/SRR12345.gtf.gz .```
+```scp username@hpc-student.uncc.edu:~lab_5/SRR12345-contigs.v2.fa.gz .```
+
+### Download on Ubuntu for Windows
+
+```scp username@hpc-student.uncc.edu:~lab_5/SRR12345.gtf.gz /mnt/c/Users/local/laptop/directory```
+```scp username@hpc-student.uncc.edu:~lab_5/SRR12345-contigs.v2.fa.gz /mnt/c/Users/local/laptop/directory```
+
+### Download using PSFTP
+
+After connecting move to a safe location on your computer by changing the local directory (LCD)
+
+```bash
+lcd C:\users\alabell3
+```
+
+```get lab_5/SRR12345-contigs.v2.fa.gz```
+```get lab_5/SRR12345.gtf.gz```
+
+If you get an "Unable to open (file)" error. That means that your _local_ directory is preventing you from downloading the file. You need to change your local directory. 
+
+
+
+## Step 3 - Upload files to GenomeQC
+
+Navigate to the genomeQC website here: https://genomeqc.maizegdb.org/
+
+Then click on **Analyze your genome annotation**
+
+![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/7634e34a-35ba-4eec-9bc2-a4055e0f09f6)
+
+
+You will see all the options on the left-hand side. Enter the following items in each of these fields
+
+- Reference genome - select nothing
+- Email address - enter your email address
+- Name of your genome annotation - I suggest naming it your SRR number
+- BUSCO Datasets (select one) - Use **saccharomycetales_odb9 (Fungi)**
+- Upload Genome - Upload your SRR12345-contigs.v2.fa.gz
+- Upload Structure Annotation file - upload your SRR1234.gtf.gz file
+- Upload Transcripts Fasta File - upload nothing
+
+It should look like this
+
+![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/24c7d2f9-6047-48c9-ae94-7c70d1f3c491)
+
+
+## Step 4 - Submit your job
+
+Click **Click To Submit Your Job**
+
+Before moving on to looking at your metrics 
+**YOU MUST CLICK THE ANNOTATION BUSCO PLOT TAB**
+
+![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/a2606e6d-34d5-4781-95fd-66c647af1fae)
+
+This will submit your BUSCO job and you will see confirmation it has been submitted
+
+![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/7d3e2f22-6aa3-410d-ab28-26d8525c8110)
+
+We will come back to this at the end
+
+
+## Step 5 - Record your Annotation Metrics results
+
+You can write down the results in the Annotation Metrics Table or click the "Download annotation metrics table" under the Click to Submit. 
+
+# LQ 1
+
+Report all 10 metrics in a screenshot or copied table. 
+
+## Step 6 - Generate your cds and protein sequences
+
+Our gtf and gff3 files are like a road map, showing us where the genes are in our genome. We need to extract the coding sequences (CDS) and the amino acid sequences so we can analyze them down the road. 
+
+We will use a tool called **bedtools** to do this. 
 
 
 
 
-
-
-
-GTF analysis 
-how many genes
-average gene length
 
 GFF3 to CDS
 Find translation table
