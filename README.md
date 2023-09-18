@@ -254,8 +254,12 @@ Based on the order your species is in select the correct genetic code
 |Trigonopsidales|	1|
 
 
+A description of each code can be found here: https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
+
 # LQ 3
-What  
+What is the **name** of your genetic code listed on the ncbi website?
+
+## Step 7b - Translate your coding sequences
 
 
 
