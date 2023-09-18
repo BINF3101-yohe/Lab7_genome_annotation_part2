@@ -190,7 +190,7 @@ If you get an "Unable to open (file)" error. That means that your _local_ direct
 &ensp;
 &ensp;
 
-## Step 3 - Upload files to GenomeQC
+## Step 4 - Upload files to GenomeQC
 
 Navigate to the genomeQC website here: https://genomeqc.maizegdb.org/
 
@@ -217,7 +217,7 @@ It should look like this
 &ensp;
 &ensp;
 
-## Step 4 - Submit your job
+## Step 5 - Submit your job
 
 Click **Click To Submit Your Job**
 
@@ -236,7 +236,7 @@ We will come back to this at the end
 &ensp;
 &ensp;
 
-## Step 5 - Record your Annotation Metrics results
+## Step 6 - Record your Annotation Metrics results
 
 You can write down the results in the Annotation Metrics Table or click the "Download annotation metrics table" under the Click to Submit. 
 
@@ -250,7 +250,7 @@ Report all 10 metrics in a screenshot or copied table.
 &ensp;
 &ensp;
 
-## Step 6 - Generate your DNA coding sequences
+## Step 7 - Generate your DNA coding sequences
 
 Our gtf and gff3 files are like a road map, showing us where the genes are in our genome. We need to extract the coding sequences (CDS) and the amino acid sequences so we can analyze them down the road. 
 
@@ -275,7 +275,7 @@ How many coding sequences are in your new cds file? _hint - we have done this mu
 &ensp;
 &ensp;
 
-## Step 7 - Filter your CDS file 
+## Step 8 - Filter your CDS file 
 
 Take a look at your new cds file using ```head```, it should look something like this:
 
@@ -327,7 +327,7 @@ How many coding sequences are in the filtered version of your genome annotation?
 &ensp;
 &ensp;
 
-## Step 8 - Generate your protein-coding sequences
+## Step 9 - Generate your protein-coding sequences
 
 To translate our DNA into Protein we use the codon table. This will predict the protein-coding sequences for all of our genes. 
 
@@ -336,7 +336,7 @@ In class we discussed that the genetic code (the codon table) is _nearly_ univer
 &ensp;
 &ensp;
 
-## Step 8a - Determine your genetic code
+## Step 9a - Determine your genetic code
 
 Go to this table and determine which Order your species belongs to https://docs.google.com/spreadsheets/d/1HpniVA2vJSQ5Tif9RImTfOdA_D6Nithp1qk2sxAAnNI/edit?usp=sharing
 
@@ -363,7 +363,7 @@ What is the **name** of your genetic code listed on the NCBI website?
 &ensp;
 &ensp;
 
-## Step 8b - Translate your coding sequences
+## Step 9b - Translate your coding sequences
 
 To translate our DNA into amino acid sequences we will use emboss again. We will use the ```transeq``` 
 
@@ -383,7 +383,7 @@ This will translate our DNA into Protein using the translation table you found a
 &ensp;
 &ensp;
 
-## Step 9 - BUSCO results
+## Step 10 - BUSCO results
 
 After an hour or so you should have received two emails about your BUSCO results
 
@@ -394,7 +394,7 @@ One will have an attached PNG describing the results and the other will have an 
 &ensp;
 &ensp;
 
-### Step 9a - Download and open HTML file
+### Step 10a - Download and open HTML file
 
 Download and open your HTML file. When you **scroll over the plot** you should see the percentage next to each bar. 
 
