@@ -242,7 +242,7 @@ You will see all the options on the left-hand side. Enter the following items in
 
 It should look like this
 
-![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/24c7d2f9-6047-48c9-ae94-7c70d1f3c491)
+[image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/24c7d2f9-6047-48c9-ae94-7c70d1f3c491)
 
 &ensp;
 &ensp;
