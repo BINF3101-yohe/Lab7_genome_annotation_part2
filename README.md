@@ -227,7 +227,8 @@ Navigate to the genomeQC website here: https://genomeqc.maizegdb.org/
 
 Then click on **Analyze your genome annotation**
 
-![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/7634e34a-35ba-4eec-9bc2-a4055e0f09f6)
+![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/1c364f49-b3f5-4b03-823e-e546e84a34c1)
+
 
 
 You will see all the options on the left-hand side. Enter the following items in each of these fields
@@ -242,7 +243,8 @@ You will see all the options on the left-hand side. Enter the following items in
 
 It should look like this
 
-[image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/24c7d2f9-6047-48c9-ae94-7c70d1f3c491)
+![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/13ece9ac-fe87-4c4a-af9e-b78af572d982)
+
 
 &ensp;
 &ensp;
@@ -255,11 +257,13 @@ Click **Click To Submit Your Job**
 Before moving on to looking at your metrics 
 **YOU MUST CLICK THE ANNOTATION BUSCO PLOT TAB**
 
-![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/a2606e6d-34d5-4781-95fd-66c647af1fae)
+![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/4bedbee2-6ebd-4d91-9a55-6eced6e47461)
+
 
 This will submit your BUSCO job and you will see confirmation it has been submitted
 
-![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/7d3e2f22-6aa3-410d-ab28-26d8525c8110)
+![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/5b308548-c38b-48e5-96d5-165929a4a961)
+
 
 We will come back to this at the end
 
