@@ -130,7 +130,7 @@ You should now see an additional file called SRR6475892.gtf.gz
 
 ### Step 2b - Edit our genome file
 
-The genome file (SRR-contigs.v2.fa) has the contig names in this format:
+The genome file (SRR-contigs.v3.fa) has the contig names in this format:
 
 ```bash
 >3464 97477 4960737 1433+,...,412+
@@ -158,7 +158,7 @@ We will use a very powerful program called sed. If you are curious how sed works
 We will use sed to replace " " with "_".
 
 ```bash
-sed -i "s/ /_/g" SRR-contigs.v2.fa
+sed -i "s/ /_/g" SRR-contigs.v3.fa
 ```
 
 You can read this command as "call sed, overwrite our file and replace in line (-i). Substitute (s/) the first item " " for the second item "_" and do it globally (g) in this file."
@@ -167,7 +167,7 @@ You can read this command as "call sed, overwrite our file and replace in line (
 Take a look at your genome file and see what changes
 
 ```bash
-head SRR-contigs.v2.fa
+head SRR-contigs.v3.fa
 ```
 
 &ensp;
@@ -178,7 +178,7 @@ head SRR-contigs.v2.fa
 We also need to compress the genome file
 
 ```bash
-gzip -k SRR-contigs.v2.fa
+gzip -k SRR-contigs.v3.fa
 ```
 
 &ensp;
@@ -190,19 +190,19 @@ To upload our files to the web server we need to download the files we need.
 
 The two files we need are
 - SRR12345.gtf.gz
-- SRR12345-contigs.v2.fa.gz
+- SRR12345-contigs.v3.fa.gz
 
 
 ### Download on Mac
 Using scp. This will download it to your default directory. You can change the ```.``` to a different direcoty. 
 
 ```scp username@hpc-student.uncc.edu:~lab_5/SRR12345.gtf.gz .```
-```scp username@hpc-student.uncc.edu:~lab_5/SRR12345-contigs.v2.fa.gz .```
+```scp username@hpc-student.uncc.edu:~lab_5/SRR12345-contigs.v3.fa.gz .```
 
 ### Download on Ubuntu for Windows
 
 ```scp username@hpc-student.uncc.edu:~lab_5/SRR12345.gtf.gz /mnt/c/Users/local/laptop/directory```
-```scp username@hpc-student.uncc.edu:~lab_5/SRR12345-contigs.v2.fa.gz /mnt/c/Users/local/laptop/directory```
+```scp username@hpc-student.uncc.edu:~lab_5/SRR12345-contigs.v3.fa.gz /mnt/c/Users/local/laptop/directory```
 
 ### Download using PSFTP
 
@@ -212,7 +212,7 @@ After connecting move to a safe location on your computer by changing the local 
 lcd C:\users\alabell3
 ```
 
-```get lab_5/SRR12345-contigs.v2.fa.gz```
+```get lab_5/SRR12345-contigs.v3.fa.gz```
 ```get lab_5/SRR12345.gtf.gz```
 
 If you get an "Unable to open (file)" error. That means that your _local_ directory is preventing you from downloading the file. You need to change your local directory. 
@@ -237,7 +237,7 @@ You will see all the options on the left-hand side. Enter the following items in
 - Email address - enter your email address
 - Name of your genome annotation - I suggest naming it your SRR number
 - BUSCO Datasets (select one) - Use **saccharomycetales_odb9 (Fungi)**
-- Upload Genome - Upload your SRR12345-contigs.v2.fa.gz
+- Upload Genome - Upload your SRR12345-contigs.v3.fa.gz
 - Upload Structure Annotation file - upload your SRR1234.gtf.gz file
 - Upload Transcripts Fasta File - upload nothing
 
@@ -294,7 +294,7 @@ We will use a tool called **bedtools** to do this.
 ```bash
 #load bedtools
 module load bedtools2
-bedtools getfasta -s -fi SRR*12345*-contigs.v2.fa -bed SRR*12345*.gtf -fo SRR*12345*.cds.v1.fasta
+bedtools getfasta -s -fi SRR*12345*-contigs.v3.fa -bed SRR*12345*.gtf -fo SRR*12345*.cds.v1.fasta
 
 #look at your files
 ls
