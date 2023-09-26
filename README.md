@@ -347,7 +347,7 @@ cp /projects/class/binf3101_001/filter_by_length.py .
 #load our necessary modules
 ml anaconda3
 
-filter_by_length.py SRR*12345*.cds.v1.fasta SRR*12345*.cds.fasta 30 100000000
+python filter_by_length.py SRR*12345*.cds.v1.fasta SRR*12345*.cds.fasta 30 100000000
 
 ```
 
