@@ -402,11 +402,13 @@ What is the **name** of your genetic code listed on the NCBI website?
 
 To translate our DNA into amino acid sequences we will use emboss again. We will use the ```transeq``` 
 
+The number you should fill in is the number of your translation table
+
 ```bash
 ml emboss
 #load emboss
 
-transeq -SRR1235.cds.fasta SRR12345.prot.fasta -table FILLIN
+transeq SRR1235.cds.fasta SRR12345.prot.fasta -table FILLIN
 
 #look at your files
 ls
