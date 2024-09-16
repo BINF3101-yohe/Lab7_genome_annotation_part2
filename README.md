@@ -79,8 +79,8 @@ Our results are stored in two files
 These are _not named well_ so we are going to copy _and_ rename them at the same time. You will need your SRR number to replace the SRR number below. 
 
 ```bash
-cp braker.gtf ~/lab_5/SRR**6475892**.gtf
-cp braker.gff3 ~/lab_5/SRR**6475892**.gff3
+cp braker.gtf ~/lab_5/SRRXXXXXX.gtf
+cp braker.gff3 ~/lab_5/SRRXXXXXX.gff3
 ```
 
 **Note** the ~ symbol means starting from your home directory. 
@@ -96,7 +96,7 @@ We also need a copy of our genome. We are going to save it as a new version beca
 #go back to our lab_4 directory
 cd ~/lab_4
 
-cp SRR6475892-contigs.v2.fa ~/lab_5/SRR6475892-contigs.v3.fa
+cp SRRXXXXXX-contigs.v2.fa ~/lab_5/SRRXXXXXX-contigs.v3.fa
 
 ```
 
@@ -116,14 +116,14 @@ We are going to use a web browser called GenomeQC to analyze the quality of our 
 We need to compress the gtf file for the analysis. We will do this with gzip
 
 ```bash
-gzip -k SRR**6475892**.gtf
+gzip -k SRRXXXXXX.gtf
 # the -k option means keep the original file
 
 ls
 #look at files
 ```
 
-You should now see an additional file called SRR6475892.gtf.gz
+You should now see an additional file called SRRXXXXXX.gtf.gz
 
 &ensp;
 &ensp;
@@ -224,6 +224,8 @@ If you get an "Unable to open (file)" error. That means that your _local_ direct
 ## Step 4 - Upload files to GenomeQC
 
 Navigate to the genomeQC website here: https://genomeqc.maizegdb.org/
+
+NOTE - if you run into issues, it is likely because the entire class is using the website. Give it a few minutes and try again. 
 
 Then click on **Analyze your genome annotation**
 
