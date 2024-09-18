@@ -318,8 +318,11 @@ We will use a tool called **bedtools** to do this.
 module load bedtools2
 bedtools getfasta -s -fi SRRXXXXX*-contigs.v3.fa -bed SRRXXXXX.cds.gtf -fo SRRXXXXX.cds.v1.fasta
 
-#look at your files
+#look at your files to see what was generated
 ls
+
+#take a look at your sequences
+head SRRXXXXX.cds.v1.fasta
 ```
 You should see a new file SRR*12345*.cds.fasta. This contains the coding sequences for each gene predicted in our genome!
 
