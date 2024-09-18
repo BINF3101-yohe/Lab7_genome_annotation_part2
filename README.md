@@ -340,10 +340,6 @@ How many coding sequences are in your new cds file? _hint - we have done this mu
 Take a look at your new cds file using ```head```, it should look something like this:
 
 ```bash
->3293_107359_5160455_772+,...,1964-:37799-37802(+)
-TAG
->3271_18188_862880_324+,...,334-:5515-5518(-)
-TAG
 >3271_18188_862880_324+,...,334-:5515-6385(-)
 ATGAGTTTAGATGGGCCTGGAGATGACCTTAAAAAGGTCGCTCAGGATTTATTGACCGGGATACTGTGGACAGAATCTGTTTCGAACGCAAATGA
 GACAAGACGACCAGCCTATGATCATATAAATCGATTATTAGCCCATTATACTGGGAATGGCTACGGCAAAACCTCGTTCCGTAGGTTGTCCGCCT
@@ -358,8 +354,6 @@ GCGGCGAGTGGTTATTGGCGGGGGTTCAGCTCGACACTGGAGATTTAGAGTGTGACTACTGGGTACCATGGAGCGATTCA
 ATAATCGAGCTCCGTCAGACGCTTCATACACTACTGGGTCATCCCAATCGTGATCATTCTCTAGGTGACTCGGCCACTCAAAATCCTTATGCATT
 CACTGTCGGATCCTCAGCATCTACTCCAAATACTATTCTTAGTGAGGACTCAGAGGTTTTCCCAATCTCCGGCTATGAGAACGATTGTTCGTTCG
 GGGATCGGTATGACTACGAACTCAGTGAATGTTAG
->3271_18188_862880_324+,...,334-:6382-6385(-)
-ATG
 ```
 You'll notice we have "coding sequences" that are just ATG (start codon) or TAG/TAA/TGA (stop codon)
 
@@ -372,7 +366,7 @@ cp /projects/class/binf3101_001/filter_by_length.py .
 #load our necessary modules
 ml anaconda3
 
-python filter_by_length.py SRR*12345*.cds.v1.fasta SRR*12345*.cds.fasta 30 100000000
+python filter_by_length.py SRRXXXXXXX.cds.v1.fasta SRRXXXXXXX.cds.fasta 30 100000000
 
 ```
 
@@ -381,7 +375,7 @@ We are filtering coding sequences between 30 and 100,000,000 base pairs. The upp
 &ensp;
 
 # LQ 3
-How many coding sequences are in the filtered version of your genome annotation?
+How many coding sequences were removed during the filtering step? 
 
 &ensp;
 &ensp;
@@ -398,19 +392,23 @@ In class we discussed that the genetic code (the codon table) is _nearly_ univer
 
 ## Step 9a - Determine your genetic code
 
-Go to this table and determine which Order your species belongs to https://docs.google.com/spreadsheets/d/1HpniVA2vJSQ5Tif9RImTfOdA_D6Nithp1qk2sxAAnNI/edit?usp=sharing
+Go to this table and determine which Order your species belongs to 
+
+https://docs.google.com/spreadsheets/d/1AIT-GHvhBJoh7BDy-Ee5fLxVRKuSfp8hqoU4H4CEA9s/edit?usp=sharing
+
 
 Based on the order your species is in select the correct genetic code
 |Order	|Codon Table|
 |------|------|
-|Ascoideales|	12|
+|Alaninales|	12|
 |Dipodascales| 1|
+|Lipomycetales| 1|
 |Phaffomycetales|	1|
 |Pichiales|	1|
-|Saccharomycetaceae|	1|
 |Saccharomycetales|	1|
+|Saccharomycodales|	1|
 |Serinales|	12|
-|Trigonopsidales|	1|
+|Sporopachydermiales|	1|
 
 
 A description of each code can be found here: https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
