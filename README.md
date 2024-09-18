@@ -324,7 +324,7 @@ ls
 #take a look at your sequences
 head SRRXXXXX.cds.v1.fasta
 ```
-You should see a new file SRR*12345*.cds.fasta. This contains the coding sequences for each gene predicted in our genome!
+You should see a new file SRRXXXXXX.cds.fasta. This contains the coding sequences for each gene predicted in our genome!
 
 &ensp;
 
@@ -375,7 +375,7 @@ We are filtering coding sequences between 30 and 100,000,000 base pairs. The upp
 &ensp;
 
 # LQ 3
-How many coding sequences were removed during the filtering step? 
+How many coding sequences were removed during the filtering step? You will need to do some subtraction.
 
 &ensp;
 &ensp;
