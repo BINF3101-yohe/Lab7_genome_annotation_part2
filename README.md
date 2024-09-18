@@ -108,6 +108,12 @@ cp SRRXXXXXX-contigs.v2.fa ~/lab_5/SRRXXXXXX-contigs.v3.fa
 
 We are going to use a web browser called GenomeQC to analyze the quality of our genome annotation. We need to prepare the files before we download them
 
+First, we need to move back into the lab_5 directory
+
+```bash
+cd ~/lab_5
+```
+
 &ensp;
 &ensp;
 
@@ -158,7 +164,7 @@ We will use a very powerful program called sed. If you are curious how sed works
 We will use sed to replace " " with "_".
 
 ```bash
-sed -i "s/ /_/g" SRR-contigs.v3.fa
+sed -i "s/ /_/g" SRRXXXXX-contigs.v3.fa
 ```
 
 You can read this command as "call sed, overwrite our file and replace in line (-i). Substitute (s/) the first item " " for the second item "_" and do it globally (g) in this file."
@@ -291,12 +297,26 @@ Report all 10 metrics in a screenshot or copied table.
 
 Our gtf and gff3 files are like a road map, showing us where the genes are in our genome. We need to extract the coding sequences (CDS) and the amino acid sequences so we can analyze them down the road. 
 
+### Step7a - Edit the gtf file to contain only the CDS
+
+In the GTF file you will see that each coding sequence (CDS) has a start_codon, a CDS, an exon, any introns, and the stop_codon. 
+
+To view the GTF file use a command like `head -50 SRRXXXXX.gtf`
+
+We want to analyze _only_ the CDS sequences
+
+To do that we will extract only the lines that contain the CDS
+
+```bash
+grep "CDS" SRRXXXXX.gtf > SRRXXXXX.cds.gtf
+````
+
 We will use a tool called **bedtools** to do this. 
 
 ```bash
 #load bedtools
 module load bedtools2
-bedtools getfasta -s -fi SRR*12345*-contigs.v3.fa -bed SRR*12345*.gtf -fo SRR*12345*.cds.v1.fasta
+bedtools getfasta -s -fi SRRXXXXX*-contigs.v3.fa -bed SRRXXXXX.cds.gtf -fo SRRXXXXX.cds.v1.fasta
 
 #look at your files
 ls
