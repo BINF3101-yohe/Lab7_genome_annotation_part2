@@ -205,20 +205,20 @@ gzip -k SRR-contigs.v3.fa
 To upload our files to the web server we need to download the files we need. 
 
 The two files we need are
-- SRR12345.gtf.gz
-- SRR12345-contigs.v3.fa.gz
+- SRRXXXXXXXX.gtf.gz
+- SRRXXXXXXXX-contigs.v3.fa.gz
 
 
 ### Download on Mac
 Using scp. This will download it to your default directory. You can change the ```.``` to a different direcoty. 
 
-```scp username@hpc-student.charlotte.edu:~lab_5/SRR12345.gtf.gz .```
-```scp username@hpc-student.charlotte.edu:~lab_5/SRR12345-contigs.v3.fa.gz .```
+```scp username@hpc-student.charlotte.edu:~lab_5/SRRXXXXXXXX.gtf.gz .```
+```scp username@hpc-student.charlotte.edu:~lab_5/SRRXXXXXXXX-contigs.v3.fa.gz .```
 
 ### Download on Ubuntu for Windows
 
-```scp username@hpc-student.charlotte.edu:~lab_5/SRR12345.gtf.gz /mnt/c/Users/local/laptop/directory```
-```scp username@hpc-student.charlotte.edu:~lab_5/SRR12345-contigs.v3.fa.gz /mnt/c/Users/local/laptop/directory```
+```scp username@hpc-student.charlotte.edu:~lab_5/SRRXXXXXXXX.gtf.gz /mnt/c/Users/local/laptop/directory```
+```scp username@hpc-student.charlotte.edu:~lab_5/SRRXXXXXXXX-contigs.v3.fa.gz /mnt/c/Users/local/laptop/directory```
 
 ### Download using PSFTP
 
@@ -228,8 +228,8 @@ After connecting move to a safe location on your computer by changing the local 
 lcd C:\users\alabell3
 ```
 
-```get lab_5/SRR12345-contigs.v3.fa.gz```
-```get lab_5/SRR12345.gtf.gz```
+```get lab_5/SRRXXXXXXXX-contigs.v3.fa.gz```
+```get lab_5/SRRXXXXXXXX.gtf.gz```
 
 If you get an "Unable to open (file)" error. That means that your _local_ directory is preventing you from downloading the file. You need to change your local directory. 
 
@@ -255,7 +255,7 @@ You will see all the options on the left-hand side. Enter the following items in
 - Email address - enter your email address
 - Name of your genome annotation - I suggest naming it your SRR number
 - BUSCO Datasets (select one) - Use **saccharomycetales_odb9 (Fungi)**
-- Upload Genome - Upload your SRR12345-contigs.v3.fa.gz
+- Upload Genome - Upload your SRRXXXXXXXX-contigs.v3.fa.gz
 - Upload Structure Annotation file - upload your SRR1234.gtf.gz file
 - Upload Transcripts Fasta File - upload nothing
 
@@ -441,7 +441,7 @@ The number you should fill in is the number of your translation table
 ml emboss
 #load emboss
 
-transeq SRR1235.cds.fasta SRR12345.prot.fasta -table FILLIN
+transeq SRR1235.cds.fasta SRRXXXXXXXX.prot.fasta -table FILLIN
 
 #look at your files
 ls
