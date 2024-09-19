@@ -72,11 +72,15 @@ cd lab_4/braker/
 ls
 ```
 
-Our results are stored in two files
+Our results are stored in two files 
 **braker.gtf**
 **braker.gff3**
 
 These are _not named well_ so we are going to copy _and_ rename them at the same time. You will need your SRR number to replace the SRR number below. 
+
+**IF THESE FILES DO NOT EXIST FOLLOW COPYING INSTRUCTIONS #2**
+
+### Copying instructions 1 - you have braker files
 
 ```bash
 cp braker.gtf ~/lab_5/SRRXXXXXX.gtf
@@ -85,11 +89,6 @@ cp braker.gff3 ~/lab_5/SRRXXXXXX.gff3
 
 **Note** the ~ symbol means starting from your home directory. 
 
-&ensp;
-&ensp;
-
-### Step 1c
-
 We also need a copy of our genome. We are going to save it as a new version because we are going to edit it slightly
 
 ```bash
@@ -97,8 +96,19 @@ We also need a copy of our genome. We are going to save it as a new version beca
 cd ~/lab_4
 
 cp SRRXXXXXX-contigs.v2.fa ~/lab_5/SRRXXXXXX-contigs.v3.fa
-
 ```
+
+
+### Copying instructions 2 - you do not have braker files
+
+You will copy braker files that I generated in the background from your assemblies
+
+```bash
+cd ~/lab_5
+cp /projects/class/binf3101_001/braker_results/SRRXXXXXX.gff3 .
+cp /projects/class/binf3101_001/braker_results/SRRXXXXXX.gtf .
+cp /projects/class/binf3101_001/braker_results/SRRXXXXXX-contigs.v3.fa.masked .
+````
 
 &ensp;
 &ensp;
