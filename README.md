@@ -218,6 +218,8 @@ Using scp. This will download it to your default directory. You can change the `
 ### Download on Ubuntu for Windows
 
 ```scp username@hpc-student.charlotte.edu:~lab_5/SRRXXXXXXXX.gtf.gz /mnt/c/Users/local/laptop/directory```
+
+
 ```scp username@hpc-student.charlotte.edu:~lab_5/SRRXXXXXXXX-contigs.v3.fa.gz /mnt/c/Users/local/laptop/directory```
 
 ### Download using PSFTP
