@@ -213,14 +213,14 @@ The two files we need are
 Using scp. This will download it to your default directory. You can change the ```.``` to a different direcoty. 
 
 ```scp username@hpc-student.charlotte.edu:lab_5/SRRXXXXXXXX.gtf.gz .```
-```scp username@hpc-student.charlotte.edu:lab_5/SRRXXXXXXXX-contigs.v3.fa.gz .```
+```scp username@hpc-student.charlotte.edu:lab_5/SRRXXXXXXXX-contigs.v3.fa.masked.gz .```
 
 ### Download on Ubuntu for Windows
 
 ```scp username@hpc-student.charlotte.edu:lab_5/SRRXXXXXXXX.gtf.gz /mnt/c/Users/local/laptop/directory```
 
 
-```scp username@hpc-student.charlotte.edu:lab_5/SRRXXXXXXXX-contigs.v3.fa.gz /mnt/c/Users/local/laptop/directory```
+```scp username@hpc-student.charlotte.edu:lab_5/SRRXXXXXXXX-contigs.v3.fa.masked.gz /mnt/c/Users/local/laptop/directory```
 
 ### Download using PSFTP
 
