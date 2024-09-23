@@ -174,7 +174,7 @@ We will use a very powerful program called sed. If you are curious how sed works
 We will use sed to replace " " with "_".
 
 ```bash
-sed -i "s/ /_/g" SRRXXXXX-contigs.v3.fa
+sed -i "s/ /_/g" SRRXXXXX-contigs.v3.fa.masked
 ```
 
 You can read this command as "call sed, overwrite our file and replace in line (-i). Substitute (s/) the first item " " for the second item "_" and do it globally (g) in this file."
@@ -183,7 +183,7 @@ You can read this command as "call sed, overwrite our file and replace in line (
 Take a look at your genome file and see what changes
 
 ```bash
-head SRR-contigs.v3.fa
+head SRR-contigs.v3.fa.masked
 ```
 
 &ensp;
@@ -194,7 +194,7 @@ head SRR-contigs.v3.fa
 We also need to compress the genome file
 
 ```bash
-gzip -k SRR-contigs.v3.fa
+gzip -k SRR-contigs.v3.fa.masked
 ```
 
 &ensp;
@@ -206,7 +206,7 @@ To upload our files to the web server we need to download the files we need.
 
 The two files we need are
 - SRRXXXXXXXX.gtf.gz
-- SRRXXXXXXXX-contigs.v3.fa.gz
+- SRRXXXXXXXX-contigs.v3..fa.masked.gz
 
 
 ### Download on Mac
