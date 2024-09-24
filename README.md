@@ -328,7 +328,7 @@ We will use a tool called **bedtools** to do this.
 ```bash
 #load bedtools
 module load bedtools2
-bedtools getfasta -s -fi SRRXXXXX*-contigs.v3.fa.masked -bed SRRXXXXX.cds.gtf -fo SRRXXXXX.cds.v1.fasta
+bedtools getfasta -s -fi SRRXXXXX-contigs.v3.fa.masked -bed SRRXXXXX.cds.gtf -fo SRRXXXXX.cds.v1.fasta
 
 #look at your files to see what was generated
 ls
