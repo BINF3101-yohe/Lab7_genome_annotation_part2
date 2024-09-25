@@ -96,6 +96,7 @@ We also need a copy of our genome. We are going to save it as a new version beca
 cd ~/lab_4
 
 cp SRRXXXXXX-contigs.v2.fa ~/lab_5/SRRXXXXXX-contigs.v3.fa
+cp SRRXXXXXX-contigs.v2.fa.masked ~/lab_5/SRRXXXXXX-contigs.v3.fa.masked
 ```
 
 
