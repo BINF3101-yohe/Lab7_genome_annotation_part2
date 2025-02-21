@@ -1,4 +1,4 @@
-# Lab_5_genome_annotation_part2
+# Lab_7_genome_annotation_part2
 
 &ensp;
 **OUTLINE**
@@ -56,7 +56,7 @@ First, create a new folder in your home directory for this week's lab.
 cd
 
 #make a new directory
-mkdir lab_5
+mkdir lab_7
 ```
 &ensp;
 &ensp;
@@ -67,7 +67,7 @@ First, find your way into the braker directory
 
 ```bash
 #move into the braker folder
-cd lab_4/braker/
+cd lab_6/braker/
 #look at the files
 ls
 ```
@@ -83,8 +83,8 @@ These are _not named well_ so we are going to copy _and_ rename them at the same
 ### Copying instructions 1 - you have braker files
 
 ```bash
-cp braker.gtf ~/lab_5/SRRXXXXXX.gtf
-cp braker.gff3 ~/lab_5/SRRXXXXXX.gff3
+cp braker.gtf ~/lab_7/SRRXXXXXX.gtf
+cp braker.gff3 ~/lab_7/SRRXXXXXX.gff3
 ```
 
 **Note** the ~ symbol means starting from your home directory. 
@@ -92,20 +92,20 @@ cp braker.gff3 ~/lab_5/SRRXXXXXX.gff3
 We also need a copy of our genome. We are going to save it as a new version because we are going to edit it slightly
 
 ```bash
-#go back to our lab_4 directory
-cd ~/lab_4
+#go back to our lab_6 directory
+cd ~/lab_6
 
-cp SRRXXXXXX-contigs.v2.fa ~/lab_5/SRRXXXXXX-contigs.v3.fa
-cp SRRXXXXXX-contigs.v2.fa.masked ~/lab_5/SRRXXXXXX-contigs.v3.fa.masked
+cp SRRXXXXXX-contigs.v2.fa ~/lab_7/SRRXXXXXX-contigs.v3.fa
+cp SRRXXXXXX-contigs.v2.fa.masked ~/lab_7/SRRXXXXXX-contigs.v3.fa.masked
 ```
 
 
-### Copying instructions 2 - you do not have braker files
+### Copying instructions 2 - you do not have braker files; you need my permission to use this; I am assuming you have completed Lab6
 
 You will copy braker files that I generated in the background from your assemblies
 
 ```bash
-cd ~/lab_5
+cd ~/lab_7
 cp /projects/class/binf3101_001/braker_results/SRRXXXXXX.gff3 .
 cp /projects/class/binf3101_001/braker_results/SRRXXXXXX.gtf .
 cp /projects/class/binf3101_001/braker_results/SRRXXXXXX-contigs.v3.fa.masked .
@@ -119,10 +119,10 @@ cp /projects/class/binf3101_001/braker_results/SRRXXXXXX-contigs.v3.fa.masked .
 
 We are going to use a web browser called GenomeQC to analyze the quality of our genome annotation. We need to prepare the files before we download them
 
-First, we need to move back into the lab_5 directory
+First, we need to move back into the lab_7 directory
 
 ```bash
-cd ~/lab_5
+cd ~/lab_7
 ```
 
 &ensp;
@@ -228,7 +228,7 @@ Using scp. This will download it to your default directory. You can change the `
 After connecting move to a safe location on your computer by changing the local directory (LCD)
 
 ```bash
-lcd C:\users\alabell3
+lcd C:\users\lyohe1
 ```
 
 ```get lab_5/SRRXXXXXXXX-contigs.v3.fa.gz```
