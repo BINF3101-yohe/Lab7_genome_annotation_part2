@@ -201,7 +201,7 @@ gzip -k SRR-contigs.v3.fa.masked
 &ensp;
 &ensp;
 
-## Step 3 - Download your files
+## Step 3 - Identify the files that we need to run BUSCO
 
 To upload our files to the web server we need to download the files we need. 
 
@@ -210,87 +210,67 @@ The two files we need are
 - SRRXXXXXXXX-contigs.v3..fa.masked.gz
 
 
-### Download on Mac
-Using scp. This will download it to your default directory. You can change the ```.``` to a different direcoty. 
-
-```scp username@hpc-student.charlotte.edu:lab_5/SRRXXXXXXXX.gtf.gz .```
-```scp username@hpc-student.charlotte.edu:lab_5/SRRXXXXXXXX-contigs.v3.fa.masked.gz .```
-
-### Download on Ubuntu for Windows
-
-```scp username@hpc-student.charlotte.edu:lab_5/SRRXXXXXXXX.gtf.gz /mnt/c/Users/local/laptop/directory```
+## Step 4 - Prepare your BUSCO slurm script
 
 
-```scp username@hpc-student.charlotte.edu:lab_5/SRRXXXXXXXX-contigs.v3.fa.masked.gz /mnt/c/Users/local/laptop/directory```
-
-### Download using PSFTP
-
-After connecting move to a safe location on your computer by changing the local directory (LCD)
-
+We now need to run BUSCO.
 ```bash
-lcd C:\users\lyohe1
+module load busco
 ```
-
-```get lab_7/SRRXXXXXXXX-contigs.v3.fa.gz```
-```get lab_7/SRRXXXXXXXX.gtf.gz```
-
-If you get an "Unable to open (file)" error. That means that your _local_ directory is preventing you from downloading the file. You need to change your local directory. 
-
-&ensp;
-&ensp;
-&ensp;
-
-## Step 4 - Upload files to GenomeQC
-
-Navigate to the genomeQC website here: https://genomeqc.maizegdb.org/
-
-NOTE - if you run into issues, it is likely because the entire class is using the website. Give it a few minutes and try again. 
-
-Then click on **Analyze your genome annotation**
-
-![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/1c364f49-b3f5-4b03-823e-e546e84a34c1)
-
-
+Check out all of the 
+```bash
+busco --list-datasets
+```
 
 You will see all the options on the left-hand side. Enter the following items in each of these fields
 
-- Reference genome - select nothing
-- Email address - enter your email address
 - Name of your genome annotation - I suggest naming it your SRR number
 - BUSCO Datasets (select one) - Use **saccharomycetales_odb9 (Fungi)**
 - Upload Genome - Upload your SRRXXXXXXXX-contigs.v3.fa.gz
 - Upload Structure Annotation file - upload your SRR1234.gtf.gz file
 - Upload Transcripts Fasta File - upload nothing
 
-It should look like this
+Make a ```busco.slurm``` script using the skeleton script below:
+```bash
+#!/bin/bash 
 
-![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/13ece9ac-fe87-4c4a-af9e-b78af572d982)
+#SBATCH --partition=Centaurus
+#SBATCH --job-name=busco_job
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=20
+#SBATCH --time=48:00:00
+#SBATCH --mem-per-cpu=200G
+
+echo "======================================================"
+echo "Start Time  : $(date)"
+echo "Submit Dir  : $SLURM_SUBMIT_DIR"
+echo "Job ID/Name : $SLURM_JOBID : $SLURM_JOB_NAME"
+echo "Node List   : $SLURM_JOB_NODELIST"
+echo "Num Tasks   : $SLURM_NTASKS total [$SLURM_NNODES nodes @ $SLURM_CPUS_ON_NODE CPUs/node]"
+echo "======================================================"
+echo ""
 
 
-&ensp;
-&ensp;
-&ensp;
+mkdir tmp
+export TMPDIR=$SLURM_SUBMIT_DIR/tmp
 
+module load busco
+cd $SLURM_SUBMIT_DIR
+
+busco -i SRRXXXXXXXX-contigs.v3.fa.masked.gz -m genome -c 20 -l saccharomycetes_odb10 -o busco_output
+
+
+echo ""
+echo "======================================================"
+echo "End Time   : $(date)"
+echo "======================================================"
+```
 ## Step 5 - Submit your job
 
-Click **Click To Submit Your Job**
-
-Before moving on to looking at your metrics 
-**YOU MUST CLICK THE ANNOTATION BUSCO PLOT TAB**
-
-![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/4bedbee2-6ebd-4d91-9a55-6eced6e47461)
-
-
-This will submit your BUSCO job and you will see confirmation it has been submitted
-
-![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/5b308548-c38b-48e5-96d5-165929a4a961)
-
-
-We will come back to this at the end
-
-&ensp;
-&ensp;
-&ensp;
+```bash
+sbatch busco.slurm
+```
+Make sure to inspect that it is running1
 
 ## Step 6 - Record your Annotation Metrics results
 
