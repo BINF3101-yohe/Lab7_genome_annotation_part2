@@ -231,8 +231,8 @@ After connecting move to a safe location on your computer by changing the local 
 lcd C:\users\lyohe1
 ```
 
-```get lab_5/SRRXXXXXXXX-contigs.v3.fa.gz```
-```get lab_5/SRRXXXXXXXX.gtf.gz```
+```get lab_7/SRRXXXXXXXX-contigs.v3.fa.gz```
+```get lab_7/SRRXXXXXXXX.gtf.gz```
 
 If you get an "Unable to open (file)" error. That means that your _local_ directory is preventing you from downloading the file. You need to change your local directory. 
 
