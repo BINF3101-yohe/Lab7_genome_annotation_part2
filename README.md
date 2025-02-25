@@ -451,8 +451,6 @@ One will have an attached PNG describing the results and the other will have an 
 
 Download and open your HTML file. When you **scroll over the plot** you should see the percentage next to each bar. 
 
-![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/747aa2f3-1521-4957-ae5b-d0e2fc618f71)
-
 This will tell us how "complete" our genome annotation is. 
 
 **Make sure to save the png and HTML somewhere for later**
