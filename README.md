@@ -222,13 +222,20 @@ Check out all of the
 busco --list-datasets
 ```
 
-You will see all the options on the left-hand side. Enter the following items in each of these fields
+Set up the environment. If you completed lab 6, your augsust config folder should already be copied locally. You can run it again, no harm done.
 
-- Name of your genome annotation - I suggest naming it your SRR number
-- BUSCO Datasets (select one) - Use **saccharomycetales_odb9 (Fungi)**
-- Upload Genome - Upload your SRRXXXXXXXX-contigs.v3.fa.gz
-- Upload Structure Annotation file - upload your SRR1234.gtf.gz file
-- Upload Transcripts Fasta File - upload nothing
+However, we need to export the path to it. Make sure you are in your home directory.
+```bash
+cd
+export AUGUSTUS_CONFIG_PATH="/users/lyohe1/augustus_config/config/"
+```
+NOTE!!! You must change 'lyohe1' to your user name!!!!
+
+Now we are ready to run. Navigate to lab_7.
+```
+cd lab_7
+```
+
 
 Make a ```busco.slurm``` script using the skeleton script below:
 ```bash
@@ -257,7 +264,7 @@ export TMPDIR=$SLURM_SUBMIT_DIR/tmp
 module load busco
 cd $SLURM_SUBMIT_DIR
 
-busco -i SRRXXXXXXXX-contigs.v3.fa.masked.gz -m genome -l saccharomycetes_odb10 -o busco_output
+busco -i SRRXXXXXXXX-contigs.v3.fa.masked -m genome -l saccharomycetes_odb10 -o busco_output -f
 
 
 echo ""
