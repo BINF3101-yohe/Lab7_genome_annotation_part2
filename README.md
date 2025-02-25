@@ -223,6 +223,13 @@ busco --list-datasets
 ```
 
 Set up the environment. If you completed lab 6, your augsust config folder should already be copied locally. You can run it again, no harm done.
+```bash
+#go to your home directory
+cd
+
+#enter this command exactly
+cp -ar $AUGUSTUS/config $HOME/augustus_config
+````
 
 However, we need to export the path to it. Make sure you are in your home directory.
 ```bash
