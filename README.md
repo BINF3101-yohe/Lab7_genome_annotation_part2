@@ -237,7 +237,7 @@ Make a ```busco.slurm``` script using the skeleton script below:
 #SBATCH --partition=Centaurus
 #SBATCH --job-name=busco_job
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=20
+#SBATCH --ntasks-per-node=1
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=200G
 
@@ -257,7 +257,7 @@ export TMPDIR=$SLURM_SUBMIT_DIR/tmp
 module load busco
 cd $SLURM_SUBMIT_DIR
 
-busco -i SRRXXXXXXXX-contigs.v3.fa.masked.gz -m genome -c 20 -l saccharomycetes_odb10 -o busco_output
+busco -i SRRXXXXXXXX-contigs.v3.fa.masked.gz -m genome -l saccharomycetes_odb10 -o busco_output
 
 
 echo ""
