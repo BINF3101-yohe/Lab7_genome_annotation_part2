@@ -287,14 +287,13 @@ sbatch busco.slurm
 Make sure to inspect that it is running1
 
 ## Step 6 - Record your Annotation Metrics results
-
-You can write down the results in the Annotation Metrics Table or click the "Download annotation metrics table" under the Click to Submit. 
-
 &ensp;
 
 # LQ 1
 
 Report all 10 metrics in a screenshot or copied table. 
+
+This question  is now irrelevant with the new script. Please answer it "N/A" in the lab worksheet.
 
 &ensp;
 &ensp;
@@ -452,24 +451,14 @@ This will translate our DNA into Protein using the translation table you found a
 
 ## Step 10 - BUSCO results
 
-After an hour or so you should have received two emails about your BUSCO results
+Once your BUSCO run has finished, navigate to the busco_output directory.
+```bash
+cd busco_results
+vi short_summary.specific.saccharomycetes_odb10.busco_output.txt
+```
+Your output should look like this:
+<img width="750" alt="Screenshot 2025-02-25 at 8 22 02 PM" src="https://github.com/user-attachments/assets/10b1d1e9-afe5-44c5-aedd-262823ba550c" />
 
-![image](https://github.com/BINF-3101/Lab_5_genome_annotation_part2/assets/47755288/d643efc9-12dd-498b-b4e8-ff97c42a8926)
-
-One will have an attached PNG describing the results and the other will have an interactive HTML document. 
-
-&ensp;
-&ensp;
-
-### Step 10a - Download and open HTML file
-
-Download and open your HTML file. When you **scroll over the plot** you should see the percentage next to each bar. 
-
-This will tell us how "complete" our genome annotation is. 
-
-**Make sure to save the png and HTML somewhere for later**
-
-&ensp;
 
 # LQ 5
 What percent of BUSCO annotations were 
