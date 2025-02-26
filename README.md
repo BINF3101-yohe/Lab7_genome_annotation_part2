@@ -420,7 +420,7 @@ In class we discussed that the genetic code (the codon table) is _nearly_ univer
 
 Go to this table and determine which Order your species belongs to 
 
-https://docs.google.com/spreadsheets/d/1AIT-GHvhBJoh7BDy-Ee5fLxVRKuSfp8hqoU4H4CEA9s/edit?usp=sharing
+https://docs.google.com/spreadsheets/d/1Roa55mNCej-Gb8TmDUUA9zWjUs2qSPv4xvi7kQ-bD0w/edit?usp=sharing 
 
 
 Based on the order your species is in select the correct genetic code
