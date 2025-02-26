@@ -309,6 +309,26 @@ In the GTF file you will see that each coding sequence (CDS) has a start_codon, 
 
 To view the GTF file use a command like `head -50 SRRXXXXX.gtf`
 
+What is the difference between a CDS and an exon?
+The main difference between a CDS (Coding Sequence) and an exon in a GTF file is their functional role and the specific portion of the gene they represent:
+
+1. Exon:
+- An exon is a sequence that remains present in mature RNA after splicing.
+- It includes both coding and non-coding regions, such as untranslated regions (UTRs).
+- Exons represent all transcribed and retained sequences, regardless of whether they code for proteins.
+
+2. CDS (Coding Sequence):
+- A CDS specifically refers to the portion of a gene's DNA or RNA that codes for a protein.
+- It represents only the protein-coding parts of exons, excluding UTRs and other non-coding regions.
+- In a GTF file, CDS entries typically include the start codon but exclude the stop codon.
+
+Key distinctions:
+- All CDS regions are part of exons, but not all exons are entirely CDS.
+- Exons may contain both coding and non-coding sequences, while CDS only contains coding sequences.
+- In GTF files, exon features represent the entire exon, while CDS features represent only the protein-coding portions.
+
+It's important to note that in some GTF files, CDS annotations might be used instead of exon annotations, especially for prokaryotic genomes where the distinction is less pronounced.
+
 We want to analyze _only_ the CDS sequences
 
 To do that we will extract only the lines that contain the CDS
